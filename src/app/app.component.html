@@ -1,20 +1,53 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <div class="row">
+    <div class="col-centered">
+      <!--The content below is only a placeholder and can be replaced.-->
+      <div style="text-align:center">
+        <h1 class="titleBlog">
+          {{title}}
+        </h1>
+      </div>
+      <mat-tab-group (selectedTabChange)="TabClicked($event)">
+        <mat-tab label="Photo">
+          <div class="innerDiv">
+            <img class="imgWidth" src="assets/meBio.png">
+          </div>
+        </mat-tab>
+        <mat-tab label="Blog Entries">
+          <div class="innerDiv">
+            <ol class="olNumbered">
+              <div class='row' *ngFor="let blogPost of blogPosts">
+                <li>
+                  <div class='col'>
+                    <a class="listItemTitle" href="{{blogPost.url}}">{{blogPost.title}}</a>
+                  </div>
+                  <div class='col'>
+                    <article class="listItem">
+                      <!--<span innerHTML="{{blogPost.content}}"></span>-->
+                      <span>{{RemoveHTMLInfo(blogPost.content)}}</span>
+                      <span>.....</span>
+                      <br/>
+                      <br/> By
+                      <a class="listItemBy" href="http://david-james-capon.blogspot.co.uk" rel="author">David Capon</a>
+                    </article>
+                  </div>
+                </li>
+              </div>
+            </ol>
+            <span class="listItemBy">Using styling Similar to:
+              <a href="https://codepen.io/secondfret/pen/oexuc">https://codepen.io/secondfret/pen/oexuc</a>
+            </span>
+          </div>
+        </mat-tab>
+        <mat-tab label="CV">
+          <div class="innerDiv">
+            <div id="linkedInBadge" class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal"
+              data-theme="light" data-vanity="david-capon-b905187">
+              <a class="LI-simple-link" href='https://uk.linkedin.com/in/david-capon-b905187?trk=profile-badge'>david capon</a>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

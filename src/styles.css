@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.titleBlog {
+    font: bold italic 45px monofur, monofur;
+    color: #555;
+}
+
+.imgWidth {
+    width: 60vw;/*800px*/
+}
+
+.innerDiv {
+    width: 60vw;/*800px*/
+    margin: 2vw;
+  }
+  
+  .olNumbered li {
+    position: relative;
+    font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    color: #ccc;
+  }
+  
+  .listItem {
+    font: 12px/1.5 Helvetica, sans-serif;
+    /*padding-left: 60px;*/
+    color: #555;
+  }
+
+  .listItemBy {
+    font: 12px/1.5 Helvetica, sans-serif;
+    /*padding-left: 60px;*/
+    color: #a7a7a7;      
+  }
+
+  .listItemTitle {
+    font: 12px/1.5 Helvetica, sans-serif;
+    /*padding-left: 60px;*/
+    color: #8f8f8f;      
+  }
+
+  #linkedInBadge {
+    width:60vw;
+    margin-left: 0;
+  }
+
+  .mat-ink-bar
+  {
+    background-color: #555 !important;
+  }
+
+  @font-face {
+    font-family: monofur;
+    src: local("monofur"),
+         local("monofur"),
+         url(./assets/monof55.ttf);
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .olNumbered li {
+      font: bold italic 12px Helvetica, Verdana, sans-serif;
+      margin-left: 5px;
+    }
+    .innerDiv {
+      width: 95vw;/*800px*/
+      margin: 5px;      
+    }
+    .imgWidth {
+      width: 80vw;/*800px*/
+      margin: 5vw;
+    }
+    #linkedInBadge {
+      width: 80vw;/*800px*/
+      margin-left: 0;
+    }
+  }
+  
